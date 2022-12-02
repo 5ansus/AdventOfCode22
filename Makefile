@@ -1,21 +1,20 @@
 CC = gcc -g# -std='gnu2x'
 CFLAGS = -Wall -Wextra -pedantic -ansi
-DAYS: 01-12
 
-DAYS = 01-12
-OBJ = $(DAYS)_problem1.o
-OBJ2 = $(DAYS)_problem2.o
-all: $(DAYS)
+DAY = 02-12
+OBJ = $(DAY)_problem1.o
+OBJ2 = $(DAY)_problem2.o
+all: $(DAY)
 
 %.o: %.c
 	@echo Compiling $<...
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(DAYS): $(OBJ) $(OBJ2)
+$(DAY): $(OBJ) $(OBJ2)
 	@echo Compiling $<...
-	$(CC) $(CFLAGS) -o $(DAYS)_problem1 $(OBJ)
-	$(CC) $(CFLAGS) -o $(DAYS)_problem2 $(OBJ2)
+	$(CC) $(CFLAGS) -o $(DAY)_problem1 $(OBJ)
+	$(CC) $(CFLAGS) -o $(DAY)_problem2 $(OBJ2)
 
 clean:
 	@echo Removing files
-	rm -f *.o $(DAYS)_problem1 $(DAYS)_problem2
+	rm -f *.o $(DAY)_problem1 $(DAY)_problem2
