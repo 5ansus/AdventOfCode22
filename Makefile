@@ -1,7 +1,7 @@
 CC = gcc -g# -std='gnu2x'
 CFLAGS = -Wall -Wextra -pedantic -ansi
 
-DAY = 03-12
+DAY = 05-12
 OBJ = $(DAY)_problem1.o
 OBJ2 = $(DAY)_problem2.o
 all: $(DAY)
